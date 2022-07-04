@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+source {
+  opacity: 0.2;
+}
+
+body {
+  background-image: url(media/magin.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+.goku,
+.aura,
+.kid,
+.bomb {
+  position: absolute;
+}
+
+.goku img {
+  width: 150px;
+  max-width: 100%;
+  filter: drop-shadow(5px 5px 5px gold);
+  cursor: pointer;
+  background-image: url(media/auras.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.kid img {
+  width: 180px;
+  max-width: 100%;
+  filter: drop-shadow(5px 5px 5px rgb(255, 9, 132));
+  cursor: pointer;
+}
+.bomb img {
+  width: 100vw;
+  max-width: 90%;
+  animation-name: bomb;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+.goku {
+  left: 90%;
+  top: 1%;
+}
+
+.bomb {
+  left: 38%;
+  top: -11%;
+}
+.kid {
+  left: 8%;
+  top: 71%;
+}
+
+@keyframes bomb {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .bomb {
+    left: 11%;
+    top: 11%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bomb {
+    left: 1%;
+    top: 41%;
+  }
+}
